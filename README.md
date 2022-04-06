@@ -1,4 +1,3 @@
 # Aspect Extraction from Greek Product Reviews
-Aspect Extraction from Greek Product Reviews 
 
-To be added soon..
+This is the github repository for the Master Thesis Aspect Extraction from Greek Product Reviews, submitted for the partial fullfilment of the Master Data & Web Science
