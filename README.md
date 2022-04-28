@@ -19,6 +19,20 @@ Run
 ----------------------------------------------------
 Results
 
+| First Header                          | Precision     | Recall        | F1-Score      |
+| ------------------------------------- | ------------- | ------------- | ------------- |
+| CRF                                   |               |               |               |
+| GRU + Softmax                         |               |               |               |
+| BiGRU + Softmax                       |               |               |               |
+| GRU + CRF                             |               |               |               |
+| BERT + Softmax                        |               |               |               |
+| BERT + CRF                            |               |               |               |
+| BERT + L1 + Softmax                   |               |               |               |
+| BERT + L1 + CRF                       |               |               |               |
+| BERT (concat middle layers) + Softmax |               |               |               |
+| BERT (concat last layers) + Softmax   |               |               |               |
+
+
 ----------------------------------------------------
 Requirements
 
