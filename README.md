@@ -21,16 +21,16 @@ Results
 
 | First Header                          | Precision     | Recall        | F1-Score      |
 | ------------------------------------- | ------------- | ------------- | ------------- |
-| CRF                                   |               |               |               |
-| GRU + Softmax                         |               |               |               |
-| BiGRU + Softmax                       |               |               |               |
-| GRU + CRF                             |               |               |               |
-| BERT + Softmax                        |               |               |               |
-| BERT + CRF                            |               |               |               |
-| BERT + L1 + Softmax                   |               |               |               |
-| BERT + L1 + CRF                       |               |               |               |
-| BERT (concat middle layers) + Softmax |               |               |               |
-| BERT (concat last layers) + Softmax   |               |               |               |
+| CRF                                   | 82.98         | 74.58         | 78.51         |
+| GRU + Softmax                         | 79.00         | 73.96         | 76.38         |
+| BiGRU + Softmax                       | 83.37         | 74.13         | 78.39         |
+| BiGRU + CRF                           | 83.81         | 74.38         | 78.75         |
+| BERT + Softmax                        | 85.52         | 81.80         | 83.59         |
+| BERT + CRF                            | 87.97         | 79.37         | 83.40         |
+| BERT + L1 + Softmax                   | 86.31         | 82.24         | 84.22         |
+| BERT + L1 + CRF                       | 86.30         | 81.99         | 84.09         |
+| BERT (concat middle layers) + Softmax | 84.43         | 80.85         | 82.58         |
+| BERT (concat last layers) + Softmax   | 81.47         | 82.13         | 81.80         |
 
 
 ----------------------------------------------------
