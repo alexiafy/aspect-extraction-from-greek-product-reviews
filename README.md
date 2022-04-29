@@ -10,10 +10,19 @@ Aspect-based Sentiment Analysis is a research field of Opinion Mining that focus
 ----------------------------------------------------
 Data
 
+| First Header                          | Precision     | Recall        | F1-Score      |
+| ------------------------------------- | ------------- | ------------- | ------------- |
+| CRF                                   | 82.98         | 74.58         | 78.51         |
+
+
 ----------------------------------------------------
 Model
 
 ![BERT CRF](https://user-images.githubusercontent.com/33041542/165788823-c5cdc1bb-cf8f-438e-9566-731ce1352e96.jpg)
+
+
+The model summary:
+
 
 ----------------------------------------------------
 Run
