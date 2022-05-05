@@ -1,6 +1,6 @@
 # Aspect Extraction from Greek Product Reviews
 
-This is the github repository for the Thesis "Aspect Extraction from Greek Product Reviews", submitted for the partial fullfilment of the M.Sc. Data & Web Science
+This is the github repository for the "Aspect Extraction from Greek Product Reviews" thesis, submitted for the partial fullfilment of the M.Sc. Data & Web Science
 
 ----------------------------------------------------
 **Abstract**:
