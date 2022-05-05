@@ -47,10 +47,10 @@ Results
 ----------------------------------------------------
 Requirements
 
-Python 3.x
-Keras
-Tensorflow
-numpy
+- Python 3.x
+- Keras
+- Tensorflow
+- numpy
 
 
 ----------------------------------------------------
