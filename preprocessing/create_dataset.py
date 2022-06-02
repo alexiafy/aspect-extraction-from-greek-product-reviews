@@ -1,4 +1,4 @@
-from preprocess import *
+from preprocessing import *
 from equivalent_aspect_detection import *
 from aspect_tagging import *
 
