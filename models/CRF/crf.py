@@ -14,7 +14,7 @@ from sklearn.metrics import make_scorer
 from sklearn.model_selection import train_test_split
 
 from models.result_logs import ResultLogs
-from models.tagging_systems import TaggingSystem
+from models.tagging_schemes import TaggingSystem
 
 
 pd.options.mode.chained_assignment = None  # default='warn'

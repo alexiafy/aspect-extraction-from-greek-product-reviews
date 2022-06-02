@@ -21,7 +21,7 @@ import os
 
 # from crf_layer import CRF
 from models.RNN.crf_layer.crf_layer import CRF
-from models.tagging_systems import TaggingSystem
+from models.tagging_schemes import TaggingSystem
 from embeddings.word2vec_embeddings import *
 
 

@@ -1,6 +1,6 @@
 from enum import Enum
 
-class TaggingSystem(Enum):
+class TaggingScheme(Enum):
     IOB1 = 'IOB1_tagging'
     IOB2 = 'IOB2_tagging'
     BIOES = 'BIOES_tagging'

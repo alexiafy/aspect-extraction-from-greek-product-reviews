@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 import os
 
-from models.tagging_systems import TaggingSystem
+from models.tagging_schemes import TaggingSystem
 from models.result_logs import ResultLogs
 
 

@@ -1,6 +1,6 @@
 from models.result_logs import ResultLogs
 import time
-from models.tagging_systems import TaggingSystem
+from models.tagging_schemes import TaggingSystem
 from datetime import datetime
 from models.CRF.crf import CRFModel
 
