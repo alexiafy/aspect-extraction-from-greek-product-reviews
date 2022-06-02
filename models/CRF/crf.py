@@ -14,7 +14,7 @@ from sklearn.metrics import make_scorer
 from sklearn.model_selection import train_test_split
 
 from models.result_logs import ResultLogs
-from models.tagging_schemes import TaggingSystem
+from models.tagging_schemes import TaggingScheme
 
 
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -22,18 +22,18 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 class CRFModel():
 
-    def __init__(self, data_file_path, data_file_name, tagging_system, pos_tagging_used):
+    def __init__(self, data_file_path, data_file_name, tagging_scheme, pos_tagging_used):
         self.data_file_path = data_file_path
         self.data_file_name = data_file_name
-        self.tagging_system = tagging_system
+        self.tagging_scheme = tagging_scheme
         self.pos_tagging_used = pos_tagging_used
         self.cv_iterations = 10
 
-        if tagging_system == TaggingSystem.IOB1:
+        if tagging_scheme == TaggingScheme.IOB1:
             self.labels = ['I', 'B']
-        elif tagging_system == TaggingSystem.IOB2:
+        elif tagging_scheme == TaggingScheme.IOB2:
             self.labels = ['I', 'B']
-        elif tagging_system == TaggingSystem.BIOES:
+        elif tagging_scheme == TaggingScheme.BIOES:
             self.labels = ['I', 'B', 'E', 'S']
         else:
             self.labels = None
@@ -62,14 +62,14 @@ class CRFModel():
         """
 
         self.data = pd.read_csv(self.data_file_path)  # .head(10)
-        self.data[self.tagging_system.value] = self.data[self.tagging_system.value].apply(
+        self.data[self.tagging_scheme.value] = self.data[self.tagging_scheme.value].apply(
             lambda x: ast.literal_eval(x))  # convert IOB column to list
 
         self.data['POS_tagging'] = self.data['POS_tagging'].apply(lambda x: ast.literal_eval(x))
 
         # concat aspect tagging with POS tagging in case POS tagging is used
         self.data['tags_concat'] = self.data.apply(
-            lambda row: self.tags_concat(row[self.tagging_system.value], row['POS_tagging']), axis=1)
+            lambda row: self.tags_concat(row[self.tagging_scheme.value], row['POS_tagging']), axis=1)
 
 
     def prepare_data(self):
@@ -82,7 +82,7 @@ class CRFModel():
         if self.pos_tagging_used:
             self.train = self.train['tags_concat'].tolist()
         else:
-            self.train = self.train[self.tagging_system.value].tolist()
+            self.train = self.train[self.tagging_scheme.value].tolist()
 
         self.X_train = [self.sent2features(s) for s in self.train]
         self.y_train = [self.sent2labels(s) for s in self.train]
@@ -91,7 +91,7 @@ class CRFModel():
         if self.pos_tagging_used:
             self.test = self.test['tags_concat'].tolist()
         else:
-            self.test = self.test[self.tagging_system.value].tolist()
+            self.test = self.test[self.tagging_scheme.value].tolist()
 
         self.X_test = [self.sent2features(s) for s in self.test]
         self.y_test = [self.sent2labels(s) for s in self.test]
@@ -250,7 +250,7 @@ class CRFModel():
         html_obj = eli5.show_weights(self.model, top=20)
 
         html_file_name = '../../results/CRF/parts_1_2_3/ELI5/eli5_weights_' + self.data_file_name + '_' \
-                         + self.tagging_system.value + '_' + str(self.pos_tagging_used) + '.html'
+                         + self.tagging_scheme.value + '_' + str(self.pos_tagging_used) + '.html'
 
         # Write html object to a file (adjust file path; Windows path is used here)
         with open(html_file_name, 'wb') as f:
@@ -339,7 +339,7 @@ class CRFModel():
         self.logs.append('==============================================================')
         self.logs.append('\nFile: ' + self.data_file_path)
         self.logs.append('Total dataframe rows: ' + str(self.data.shape[0]))
-        self.logs.append('Tagging system: ' + self.tagging_system.value)
+        self.logs.append('Tagging system: ' + self.tagging_scheme.value)
         self.logs.append('POS tagging applied: ' + str(self.pos_tagging_used))
         self.logs.append(str(self.cv_iterations) +'-fold Cross Validation ')
 
@@ -374,7 +374,7 @@ class CRFModel():
         self.logs.append('==============================================================')
         self.logs.append('\nFile: ' + self.data_file_path)
         self.logs.append('Total dataframe rows: ' + str(self.data.shape[0]))
-        self.logs.append('Tagging system: ' + self.tagging_system.value)
+        self.logs.append('Tagging system: ' + self.tagging_scheme.value)
         self.logs.append('POS tagging applied: ' + str(self.pos_tagging_used))
         self.logs.append(str(self.cv_iterations) +'-fold Cross Validation ')
 

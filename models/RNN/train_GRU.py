@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 import os
 
-from models.tagging_schemes import TaggingSystem
+from models.tagging_schemes import TaggingScheme
 from models.result_logs import ResultLogs
 
 
@@ -38,9 +38,9 @@ def run_single_experiment():
                         'batch_size': 32,
                         'n_units': 128,
                         'dropout_rate': 0.4,
-                        'epochs': 40}
+                        'epochs': 3}
 
-    model = GRUClassifier(model_parameters, FILENAME, RESULTS_FOLDER_PATH, tagging_system=TaggingSystem.IOB2)
+    model = GRUClassifier(model_parameters, FILENAME, RESULTS_FOLDER_PATH, tagging_scheme=TaggingScheme.IOB2)
     model.load_data(FOLDERNAME)
     model.prepare_data()
     model.create_embeddings()
@@ -88,10 +88,10 @@ def run_1st_experimentation():
     FILENAMES = ['ae_parts_1_2_3',
                  'ae_parts_1_2_3_usrnames_replaced']
 
-    tagging_systems = [TaggingSystem.IOB1, TaggingSystem.IOB2, TaggingSystem.BIOES]
+    tagging_schemes = [TaggingScheme.IOB1, TaggingScheme.IOB2, TaggingScheme.BIOES]
 
     for file_name in FILENAMES:
-        for tagging_system in tagging_systems:
+        for tagging_scheme in tagging_schemes:
             start_experiment_time = time.time()
 
             # Run experiment
@@ -103,7 +103,7 @@ def run_1st_experimentation():
                                 'n_units': 128,
                                 'dropout_rate': 0.4}
 
-            model = GRUClassifier(model_parameters, file_name, RESULTS_FOLDER_PATH, tagging_system=tagging_system)
+            model = GRUClassifier(model_parameters, file_name, RESULTS_FOLDER_PATH, tagging_scheme=tagging_scheme)
             model.load_data(FOLDERNAME)
             model.prepare_data()
             model.create_embeddings()
@@ -189,7 +189,7 @@ def run_2nd_experimentation():
                                         'epochs': 40}
 
                     model = GRUClassifier(model_parameters, DATA_FILENAME, RESULTS_FOLDER_PATH,
-                                      tagging_system=TaggingSystem.IOB2)
+                                      tagging_scheme=TaggingScheme.IOB2)
                     model.load_data(DATA_FOLDERNAME)
                     model.prepare_data()
                     model.create_embeddings()

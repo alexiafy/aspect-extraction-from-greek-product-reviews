@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 class ResultLogs:
 
     def __init__(self):

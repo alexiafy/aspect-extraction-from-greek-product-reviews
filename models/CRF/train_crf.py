@@ -1,6 +1,6 @@
 from models.result_logs import ResultLogs
 import time
-from models.tagging_schemes import TaggingSystem
+from models.tagging_schemes import TaggingScheme
 from datetime import datetime
 from models.CRF.crf import CRFModel
 
@@ -17,14 +17,14 @@ def run_all_experiments():
     FOLDERNAME = "../../data/datasets/aspect_extraction_datasets/parts_1_2_3/"
     FILENAMES = ['ae_parts_1_2_3_usrnames_replaced']
 
-    tagging_systems = [TaggingSystem.IOB2]  # [TaggingSystem.IOB1, TaggingSystem.IOB2, TaggingSystem.BIOES]
+    tagging_schemes = [TaggingScheme.IOB2]  # [TaggingSystem.IOB1, TaggingSystem.IOB2, TaggingSystem.BIOES]
     pos_tagging_list = [True]  # [True, False]
 
-    total_experiments = len(FILENAMES) * len(tagging_systems) * len(pos_tagging_list)
+    total_experiments = len(FILENAMES) * len(tagging_schemes) * len(pos_tagging_list)
     experiment_idx = 0
 
     for file_name in FILENAMES:
-        for IOB_tagging in tagging_systems:
+        for IOB_tagging in tagging_schemes:
             for pos_tagging in pos_tagging_list:
 
                 experiment_idx += 1
@@ -65,7 +65,7 @@ def run_single_experiment():
 
     logs = ResultLogs()
 
-    crf_instance = CRFModel(data_file_path, FILENAME, TaggingSystem.IOB2, False)
+    crf_instance = CRFModel(data_file_path, FILENAME, TaggingScheme.IOB2, False)
     crf_instance.train_model()
 
     logs.result_logs.append(crf_instance.logs)

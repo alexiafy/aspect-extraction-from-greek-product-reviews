@@ -21,7 +21,7 @@ import os
 
 # from crf_layer import CRF
 from models.RNN.crf_layer.crf_layer import CRF
-from models.tagging_schemes import TaggingSystem
+from models.tagging_schemes import TaggingScheme
 from embeddings.word2vec_embeddings import *
 
 
@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore")
 
 class GRUClassifier:
 
-    def __init__(self, model_parameters, FILENAME, RESULTS_FOLDER_PATH, tagging_system):
+    def __init__(self, model_parameters, FILENAME, RESULTS_FOLDER_PATH, tagging_scheme):
         self.FILENAME = FILENAME
         self.RESULTS_FOLDER_PATH = RESULTS_FOLDER_PATH
 
@@ -64,7 +64,7 @@ class GRUClassifier:
         self.n_tags = 0
         self.embedding_weights = None
 
-        self.tagging_system = tagging_system
+        self.tagging_scheme = tagging_scheme
 
         self.model = None
         self.history = None
@@ -84,19 +84,19 @@ class GRUClassifier:
         exp_params = ['_Bi' if self.use_bidirectional else '',
                       '_GRU']
 
-        if self.tagging_system == TaggingSystem.IOB1:
+        if self.tagging_scheme == TaggingScheme.IOB1:
             tag_scheme_str = 'IOB1'
-        elif self.tagging_system == TaggingSystem.IOB2:
+        elif self.tagging_scheme == TaggingScheme.IOB2:
             tag_scheme_str = 'IOB2'
-        elif self.tagging_system == TaggingSystem.BIOES:
+        elif self.tagging_scheme == TaggingScheme.BIOES:
             tag_scheme_str = 'BIOES'
-        elif self.tagging_system == TaggingSystem.IOB1SentimentC3:
+        elif self.tagging_scheme == TaggingScheme.IOB1SentimentC3:
             tag_scheme_str = 'IOB1SentC3'
-        elif self.tagging_system == TaggingSystem.IOB1SentimentC5:
+        elif self.tagging_scheme == TaggingScheme.IOB1SentimentC5:
             tag_scheme_str = 'IOB1SentC5'
-        elif self.tagging_system == TaggingSystem.IOB2SentimentC3:
+        elif self.tagging_scheme == TaggingScheme.IOB2SentimentC3:
             tag_scheme_str = 'IOB2SentC3'
-        elif self.tagging_system == TaggingSystem.IOB2SentimentC5:
+        elif self.tagging_scheme == TaggingScheme.IOB2SentimentC5:
             tag_scheme_str = 'IOB2SentC5'
 
 
@@ -109,7 +109,7 @@ class GRUClassifier:
 
     def load_data(self, FOLDERNAME):
         self.data = pd.read_csv(FOLDERNAME + self.FILENAME + ".csv")  # .head(10)
-        self.data[self.tagging_system.value] = self.data[self.tagging_system.value].apply(
+        self.data[self.tagging_scheme.value] = self.data[self.tagging_scheme.value].apply(
             lambda x: ast.literal_eval(x))  # convert IOB column to list
 
         self.logs.append('\n==============================================================')
@@ -118,15 +118,15 @@ class GRUClassifier:
         self.logs.append('==============================================================')
         self.logs.append('\nFile: ' + FOLDERNAME + self.FILENAME + ".csv")
         self.logs.append('Total dataframe rows: ' + str(self.data.shape[0]))
-        self.logs.append('Tagging system: ' + self.tagging_system.value)
+        self.logs.append('Tagging system: ' + self.tagging_scheme.value)
 
 
     def prepare_data(self):
 
         # Prepare Data
         # --------------------------------------------
-        sentences = [sent for sent in self.data[self.tagging_system.value]]
-        words = [word_tag_pair[0] for sent in self.data[self.tagging_system.value] for word_tag_pair in sent]
+        sentences = [sent for sent in self.data[self.tagging_scheme.value]]
+        words = [word_tag_pair[0] for sent in self.data[self.tagging_scheme.value] for word_tag_pair in sent]
         self.tags = set([word_tag_pair[1] for sent in sentences for word_tag_pair in sent])  # get the unique tags
 
         n_unique_words = len(set([word.lower() for word in words]))
