@@ -1,0 +1,1668 @@
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 64
+Dropout: 0.2
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590CF5FD00>
+Learning rate: 0.0001
+
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 70, 100)           2080300   
+                                                                 
+ dropout (Dropout)           (None, 70, 100)           0         
+                                                                 
+ bidirectional (Bidirectiona  (None, 70, 128)          63744     
+ l)                                                              
+                                                                 
+ bidirectional_1 (Bidirectio  (None, 70, 128)          74496     
+ nal)                                                            
+                                                                 
+ dense (Dense)               (None, 70, 3)             387       
+                                                                 
+ crf (CRF)                   (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 13.965126037597656, 
+Accuracy: 0.9752060174942017
+
+
+              precision    recall  f1-score   support
+
+           B     0.8471    0.8208    0.8338      1931
+           I     0.8110    0.6429    0.7172       574
+
+   micro avg     0.8401    0.7800    0.8089      2505
+   macro avg     0.8291    0.7318    0.7755      2505
+weighted avg     0.8389    0.7800    0.8071      2505
+
+
+----------------------------
+Elapsed time: 00:19:07
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 64
+Dropout: 0.3
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590F4B0CD0>
+Learning rate: 0.0001
+
+
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_1 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_2 (Bidirectio  (None, 70, 128)          63744     
+ nal)                                                            
+                                                                 
+ bidirectional_3 (Bidirectio  (None, 70, 128)          74496     
+ nal)                                                            
+                                                                 
+ dense_1 (Dense)             (None, 70, 3)             387       
+                                                                 
+ crf_1 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 75.28382873535156, 
+Accuracy: 0.053107619285583496
+
+
+              precision    recall  f1-score   support
+
+           B     0.8457    0.8260    0.8357      1931
+           I     0.8059    0.6655    0.7290       574
+
+   micro avg     0.8377    0.7892    0.8127      2505
+   macro avg     0.8258    0.7458    0.7824      2505
+weighted avg     0.8366    0.7892    0.8113      2505
+
+
+----------------------------
+Elapsed time: 00:18:24
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 64
+Dropout: 0.4
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x0000025918C84EE0>
+Learning rate: 0.0001
+
+
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_2 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_2 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_4 (Bidirectio  (None, 70, 128)          63744     
+ nal)                                                            
+                                                                 
+ bidirectional_5 (Bidirectio  (None, 70, 128)          74496     
+ nal)                                                            
+                                                                 
+ dense_2 (Dense)             (None, 70, 3)             387       
+                                                                 
+ crf_2 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 14.86316204071045, 
+Accuracy: 0.987605631351471
+
+
+              precision    recall  f1-score   support
+
+           B     0.8230    0.8426    0.8327      1931
+           I     0.7809    0.6829    0.7286       574
+
+   micro avg     0.8144    0.8060    0.8102      2505
+   macro avg     0.8019    0.7627    0.7806      2505
+weighted avg     0.8133    0.8060    0.8088      2505
+
+
+----------------------------
+Elapsed time: 00:17:35
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 64
+Dropout: 0.5
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590CDECB50>
+Learning rate: 0.0001
+
+
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_3 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_3 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_6 (Bidirectio  (None, 70, 128)          63744     
+ nal)                                                            
+                                                                 
+ bidirectional_7 (Bidirectio  (None, 70, 128)          74496     
+ nal)                                                            
+                                                                 
+ dense_3 (Dense)             (None, 70, 3)             387       
+                                                                 
+ crf_3 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 18.819931030273438, 
+Accuracy: 0.9807703495025635
+
+
+              precision    recall  f1-score   support
+
+           B     0.8417    0.8286    0.8351      1931
+           I     0.8004    0.6707    0.7299       574
+
+   micro avg     0.8333    0.7924    0.8124      2505
+   macro avg     0.8210    0.7497    0.7825      2505
+weighted avg     0.8322    0.7924    0.8110      2505
+
+
+----------------------------
+Elapsed time: 00:17:48
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 128
+Dropout: 0.2
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590C41BFD0>
+Learning rate: 0.0001
+
+
+Model: "sequential_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_4 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_4 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_8 (Bidirectio  (None, 70, 256)          176640    
+ nal)                                                            
+                                                                 
+ bidirectional_9 (Bidirectio  (None, 70, 256)          296448    
+ nal)                                                            
+                                                                 
+ dense_4 (Dense)             (None, 70, 3)             771       
+                                                                 
+ crf_4 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 42.25284957885742, 
+Accuracy: 0.9787904620170593
+
+
+              precision    recall  f1-score   support
+
+           B     0.8382    0.8317    0.8349      1931
+           I     0.7911    0.6794    0.7310       574
+
+   micro avg     0.8286    0.7968    0.8124      2505
+   macro avg     0.8146    0.7556    0.7830      2505
+weighted avg     0.8274    0.7968    0.8111      2505
+
+
+----------------------------
+Elapsed time: 00:44:32
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 128
+Dropout: 0.3
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590945F070>
+Learning rate: 0.0001
+
+
+Model: "sequential_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_5 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_5 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_10 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_11 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_5 (Dense)             (None, 70, 3)             771       
+                                                                 
+ crf_5 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 44.7407112121582, 
+Accuracy: 0.9800702929496765
+
+
+              precision    recall  f1-score   support
+
+           B     0.8662    0.8115    0.8380      1931
+           I     0.8100    0.6760    0.7369       574
+
+   micro avg     0.8545    0.7804    0.8158      2505
+   macro avg     0.8381    0.7437    0.7875      2505
+weighted avg     0.8533    0.7804    0.8148      2505
+
+
+----------------------------
+Elapsed time: 00:42:34
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 128
+Dropout: 0.4
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590CC9ACA0>
+Learning rate: 0.0001
+
+
+Model: "sequential_6"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_6 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_6 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_12 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_13 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_6 (Dense)             (None, 70, 3)             771       
+                                                                 
+ crf_6 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 93.47238159179688, 
+Accuracy: 0.5148611664772034
+
+
+              precision    recall  f1-score   support
+
+           B     0.7960    0.8607    0.8271      1931
+           I     0.7574    0.7125    0.7343       574
+
+   micro avg     0.7881    0.8267    0.8069      2505
+   macro avg     0.7767    0.7866    0.7807      2505
+weighted avg     0.7871    0.8267    0.8058      2505
+
+
+----------------------------
+Elapsed time: 00:45:54
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 32
+Units size: 128
+Dropout: 0.5
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x0000025919F568B0>
+Learning rate: 0.0001
+
+
+Model: "sequential_7"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_7 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_7 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_14 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_15 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_7 (Dense)             (None, 70, 3)             771       
+                                                                 
+ crf_7 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 72.57640838623047, 
+Accuracy: 0.5322298407554626
+
+
+              precision    recall  f1-score   support
+
+           B     0.8063    0.8472    0.8263      1931
+           I     0.7631    0.7125    0.7369       574
+
+   micro avg     0.7973    0.8164    0.8067      2505
+   macro avg     0.7847    0.7799    0.7816      2505
+weighted avg     0.7964    0.8164    0.8058      2505
+
+
+----------------------------
+Elapsed time: 00:42:38
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 64
+Dropout: 0.2
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590887DF70>
+Learning rate: 0.0001
+
+
+Model: "sequential_8"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_8 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_8 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_16 (Bidirecti  (None, 70, 128)          63744     
+ onal)                                                           
+                                                                 
+ bidirectional_17 (Bidirecti  (None, 70, 128)          74496     
+ onal)                                                           
+                                                                 
+ dense_8 (Dense)             (None, 70, 3)             387       
+                                                                 
+ crf_8 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 48.46561050415039, 
+Accuracy: 0.5165714621543884
+
+
+              precision    recall  f1-score   support
+
+           B     0.8282    0.8312    0.8297      1931
+           I     0.7680    0.6864    0.7249       574
+
+   micro avg     0.8156    0.7980    0.8067      2505
+   macro avg     0.7981    0.7588    0.7773      2505
+weighted avg     0.8144    0.7980    0.8057      2505
+
+
+----------------------------
+Elapsed time: 00:14:10
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 64
+Dropout: 0.3
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590F131850>
+Learning rate: 0.0001
+
+
+Model: "sequential_9"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_9 (Embedding)     (None, 70, 100)           2080300   
+                                                                 
+ dropout_9 (Dropout)         (None, 70, 100)           0         
+                                                                 
+ bidirectional_18 (Bidirecti  (None, 70, 128)          63744     
+ onal)                                                           
+                                                                 
+ bidirectional_19 (Bidirecti  (None, 70, 128)          74496     
+ onal)                                                           
+                                                                 
+ dense_9 (Dense)             (None, 70, 3)             387       
+                                                                 
+ crf_9 (CRF)                 (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 71.37142944335938, 
+Accuracy: 0.5236867666244507
+
+
+              precision    recall  f1-score   support
+
+           B     0.8494    0.8177    0.8332      1931
+           I     0.7746    0.6707    0.7190       574
+
+   micro avg     0.8336    0.7840    0.8081      2505
+   macro avg     0.8120    0.7442    0.7761      2505
+weighted avg     0.8323    0.7840    0.8071      2505
+
+
+----------------------------
+Elapsed time: 00:14:11
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 64
+Dropout: 0.4
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x0000025919F69580>
+Learning rate: 0.0001
+
+
+Model: "sequential_10"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_10 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_10 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_20 (Bidirecti  (None, 70, 128)          63744     
+ onal)                                                           
+                                                                 
+ bidirectional_21 (Bidirecti  (None, 70, 128)          74496     
+ onal)                                                           
+                                                                 
+ dense_10 (Dense)            (None, 70, 3)             387       
+                                                                 
+ crf_10 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 16.208892822265625, 
+Accuracy: 0.9807370901107788
+
+
+              precision    recall  f1-score   support
+
+           B     0.8522    0.8089    0.8300      1931
+           I     0.7798    0.6725    0.7222       574
+
+   micro avg     0.8368    0.7776    0.8061      2505
+   macro avg     0.8160    0.7407    0.7761      2505
+weighted avg     0.8356    0.7776    0.8053      2505
+
+
+----------------------------
+Elapsed time: 00:15:00
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 64
+Dropout: 0.5
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590CFB4AF0>
+Learning rate: 0.0001
+
+
+Model: "sequential_11"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_11 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_11 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_22 (Bidirecti  (None, 70, 128)          63744     
+ onal)                                                           
+                                                                 
+ bidirectional_23 (Bidirecti  (None, 70, 128)          74496     
+ onal)                                                           
+                                                                 
+ dense_11 (Dense)            (None, 70, 3)             387       
+                                                                 
+ crf_11 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,218,936
+Trainable params: 2,218,936
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 63.422630310058594, 
+Accuracy: 0.5134596228599548
+
+
+              precision    recall  f1-score   support
+
+           B     0.8262    0.8099    0.8180      1931
+           I     0.7750    0.6481    0.7059       574
+
+   micro avg     0.8158    0.7729    0.7938      2505
+   macro avg     0.8006    0.7290    0.7619      2505
+weighted avg     0.8145    0.7729    0.7923      2505
+
+
+----------------------------
+Elapsed time: 00:14:30
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 128
+Dropout: 0.2
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x0000025917A2EFD0>
+Learning rate: 0.0001
+
+
+Model: "sequential_12"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_12 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_12 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_24 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_25 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_12 (Dense)            (None, 70, 3)             771       
+                                                                 
+ crf_12 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 19.487009048461914, 
+Accuracy: 0.978126585483551
+
+
+              precision    recall  f1-score   support
+
+           B     0.8556    0.8042    0.8292      1931
+           I     0.8017    0.6481    0.7168       574
+
+   micro avg     0.8447    0.7685    0.8048      2505
+   macro avg     0.8287    0.7262    0.7730      2505
+weighted avg     0.8433    0.7685    0.8034      2505
+
+
+----------------------------
+Elapsed time: 01:04:25
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 128
+Dropout: 0.3
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590CEF9E50>
+Learning rate: 0.0001
+
+
+Model: "sequential_13"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_13 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_13 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_26 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_27 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_13 (Dense)            (None, 70, 3)             771       
+                                                                 
+ crf_13 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 31.308761596679688, 
+Accuracy: 0.990617573261261
+
+
+              precision    recall  f1-score   support
+
+           B     0.8337    0.8255    0.8296      1931
+           I     0.7751    0.6725    0.7201       574
+
+   micro avg     0.8216    0.7904    0.8057      2505
+   macro avg     0.8044    0.7490    0.7749      2505
+weighted avg     0.8203    0.7904    0.8045      2505
+
+
+----------------------------
+Elapsed time: 01:02:41
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 128
+Dropout: 0.4
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x000002590F3815B0>
+Learning rate: 0.0001
+
+
+Model: "sequential_14"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_14 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_14 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_28 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_29 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_14 (Dense)            (None, 70, 3)             771       
+                                                                 
+ crf_14 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 78.4045639038086, 
+Accuracy: 0.042980343103408813
+
+
+              precision    recall  f1-score   support
+
+           B     0.8226    0.8307    0.8266      1931
+           I     0.7510    0.6882    0.7182       574
+
+   micro avg     0.8074    0.7980    0.8027      2505
+   macro avg     0.7868    0.7594    0.7724      2505
+weighted avg     0.8062    0.7980    0.8017      2505
+
+
+----------------------------
+Elapsed time: 01:06:48
+----------------------------
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/ae_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 7017
+Tagging system: IOB2_tagging
+Total number of tagged sentences: 7017
+Total number of words: 213616
+Total number of unique words: 26256
+Total number of tags: 3
+
+
+** Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+
+Percentage of <UKN> words in test set 8.967326496541855
+Percentage of <UKN> words in validation set 9.165143679278298
+
+
+** Final Shape **
+----------------------------------------------------------------------------------------------------
+
+TRAINING DATA
+Shape of input sequences: (4771,)
+Shape of output sequences: (4771,)
+--------------------------------------------------
+VALIDATION DATA
+Shape of input sequences: (842,)
+Shape of output sequences: (842,)
+--------------------------------------------------
+TESTING DATA
+Shape of input sequences: (1404,)
+Shape of output sequences: (1404,)
+Embeddings shape: (20803, 100)
+
+Vocabulary size: 20803
+Embedding size: 100
+Batch size: 64
+Units size: 128
+Dropout: 0.5
+Optimizer: <keras.optimizer_v2.adam.Adam object at 0x00000259096062E0>
+Learning rate: 0.0001
+
+
+Model: "sequential_15"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_15 (Embedding)    (None, 70, 100)           2080300   
+                                                                 
+ dropout_15 (Dropout)        (None, 70, 100)           0         
+                                                                 
+ bidirectional_30 (Bidirecti  (None, 70, 256)          176640    
+ onal)                                                           
+                                                                 
+ bidirectional_31 (Bidirecti  (None, 70, 256)          296448    
+ onal)                                                           
+                                                                 
+ dense_15 (Dense)            (None, 70, 3)             771       
+                                                                 
+ crf_15 (CRF)                (None, 70, 3)             9         
+                                                                 
+=================================================================
+Total params: 2,554,168
+Trainable params: 2,554,168
+Non-trainable params: 0
+_________________________________________________________________
+
+Early stopping in epoch 0 
+
+
+Loss: 34.4305305480957, 
+Accuracy: 0.9899595379829407
+
+
+              precision    recall  f1-score   support
+
+           B     0.8338    0.8182    0.8259      1931
+           I     0.7991    0.6516    0.7179       574
+
+   micro avg     0.8269    0.7800    0.8028      2505
+   macro avg     0.8165    0.7349    0.7719      2505
+weighted avg     0.8258    0.7800    0.8012      2505
+
+
+----------------------------
+Elapsed time: 01:05:02
+----------------------------
+
+----------------------------
+Total elapsed time: 09:25:27
+----------------------------

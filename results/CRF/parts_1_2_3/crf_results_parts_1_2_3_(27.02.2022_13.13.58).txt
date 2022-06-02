@@ -1,0 +1,184 @@
+
+==============================================================
+==============================================================
+
+---------------------------- Info ----------------------------
+==============================================================
+
+File: ../../datasets/aspect_extraction_datasets/parts_1_2_3/absa_parts_1_2_3_usrnames_replaced.csv
+Total dataframe rows: 6589
+Tagging system: IOB2_tagging
+POS tagging applied: True
+10-fold Cross Validation 
+
+
+-------------------- Grid Search Results ---------------------
+==============================================================
+
+Best parameters: {'algorithm': 'pa', 'pa_type': 0}
+Best CV score: 0.8071933375421978
+Model size: 2.15M
+
+
+F1-score: 0.8062016529256734
+
+
+-------------------- Classification Report -------------------
+==============================================================
+              precision    recall  f1-score   support
+
+           B     0.8581    0.7932    0.8244      2752
+           I     0.7628    0.7257    0.7438       802
+
+   micro avg     0.8361    0.7780    0.8060      3554
+   macro avg     0.8104    0.7595    0.7841      3554
+weighted avg     0.8366    0.7780    0.8062      3554
+
+
+
+------------------------ ELI5 Weights ------------------------
+==============================================================
+Explained as: CRF
+
+Transition features:
+         B       I       O
+--  ------  ------  ------
+B   -0.459   0.958  -0.216
+I   -0.512   0.620  -0.441
+O    0.476  -1.012   0.585
+
+y='B' top features
+    … 4357 more positive …     
+     … 531 more negative …     
+Weight  Feature                
+------  -----------------------
++2.894  word.lower():φραπεδακι 
++2.218  word.lower():φραπεδες  
++2.061  word.lower():φραπεδιες 
++2.030  word.lower():φραπεδακια
++1.980  word.lower():σουρωτη   
+
+y='I' top features
+       … 2026 more positive …       
+       … 226 more negative …        
+Weight  Feature                     
+------  ----------------------------
++1.500  -1:word.lower():κατσιβελα   
++1.289  -1:word.lower():@           
++1.163  -1:word.lower():l           
++1.133  -1:word.lower():greeking    
++1.075  -1:word.lower():cosmotesport
+
+y='O' top features
+Weight  Feature                  
+------  -------------------------
++1.475  +1:word.lower():toskatom 
++1.293  +1:word.lower():will     
++1.284  -1:word.lower():αγαπημενο
++1.265  -1:word.lower():τηλ      
+     … 18529 more positive …     
+     … 2892 more negative …      
+-1.267  word.lower():φραπεδια    
+
+
+
+------------------------ Transitions -------------------------
+==============================================================
+
+Top likely transitions:
+B      -> I       0.958412
+I      -> I       0.620138
+O      -> O       0.585366
+O      -> B       0.476016
+B      -> O       -0.216217
+I      -> O       -0.440535
+B      -> B       -0.458512
+I      -> B       -0.512235
+O      -> I       -1.012433
+
+Top unlikely transitions:
+B      -> I       0.958412
+I      -> I       0.620138
+O      -> O       0.585366
+O      -> B       0.476016
+B      -> O       -0.216217
+I      -> O       -0.440535
+B      -> B       -0.458512
+I      -> B       -0.512235
+O      -> I       -1.012433
+
+
+----------------------- State Features -----------------------
+==============================================================
+
+Top positive:
+2.893649 B        word.lower():φραπεδακι
+2.218044 B        word.lower():φραπεδες
+2.061273 B        word.lower():φραπεδιες
+2.029865 B        word.lower():φραπεδακια
+1.980247 B        word.lower():σουρωτη
+1.919197 B        word.lower():εβιαν
+1.865170 B        word.lower():γερμανος
+1.754861 B        word.lower():μαλαματινα
+1.727513 B        word.lower():γουιντος
+1.667495 B        word.lower():παναθηναικου
+1.647107 B        word.lower():κουακερ
+1.631030 B        word.lower():αυρα
+1.606374 B        word.lower():σκαι
+1.567126 B        word.lower():playstation
+1.554014 B        word.lower():λιποσαν
+1.514702 B        word[-2:]:Gr
+1.499553 I        -1:word.lower():κατσιβελα
+1.497637 B        word.lower():κουλουραδες
+1.485711 B        word.lower():jeepαρα
+1.475374 O        +1:word.lower():toskatom
+1.461569 B        word.lower():καγια
+1.452184 B        word.lower():μπογδανο
+1.451375 B        -1:word.lower():δραματα
+1.440045 B        word.lower():νεσπρεσιερα
+1.439850 B        word.lower():βονταφονουλα
+1.438972 B        word.lower():μιραντα
+1.426690 B        word.lower():plaisioofficial
+1.416747 B        word.lower():δωδωνη
+1.413956 B        +1:word.lower():αναμενω
+1.410961 B        word.lower():βενετης
+
+Top negative:
+-0.705645 I        +1:word.lower():εννοειται
+-0.709213 O        word.lower():γιωτης
+-0.711924 B        +1:word.lower():go
+-0.715760 O        word.lower():εγνατια
+-0.734145 O        word.lower():εφορια
+-0.742926 O        word[-2:]:gr
+-0.750225 O        -1:word.lower():εκδοσεις
+-0.753450 O        word.lower():παππας
+-0.753740 O        -1:word.lower():paotv
+-0.757180 O        word.lower():κεχαγιας
+-0.763490 O        -1:word.lower():disney
+-0.764558 O        -1:word.lower():νερο
+-0.773530 O        word.lower():μερεντα
+-0.779433 O        word.lower():παμπλικ
+-0.816446 O        word.lower():πειραιως
+-0.834395 I        word.lower():vodafone
+-0.854264 I        +1:word.lower():σας
+-0.867999 O        word.lower():φραπε
+-0.879888 O        -1:word.lower():athens
+-0.912596 B        -1:word.lower():#
+-0.929838 O        word.lower():νεσκαφε
+-0.934972 O        word.lower():μελισσες
+-0.975991 O        word.lower():ετε
+-1.013275 O        word[-2:]:tv
+-1.058589 O        word.lower():φραπεδαρα
+-1.071773 O        word.lower():κοσμοτε
+-1.074590 O        word.lower():οτε
+-1.104617 O        word.lower():φραπες
+-1.127215 O        -1:word.lower():l
+-1.266831 O        word.lower():φραπεδια
+
+------------------------
+Elapsed time: 00:22:24
+------------------------
+
+----------------------------
+Total elapsed time: 00:22:24
+----------------------------
