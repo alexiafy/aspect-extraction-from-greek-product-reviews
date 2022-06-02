@@ -124,7 +124,7 @@ class GRUClassifier:
     def prepare_data(self):
 
         # Prepare Data
-        # --------------------------------------------
+        # -------------------------------------------
         sentences = [sent for sent in self.data[self.tagging_scheme.value]]
         words = [word_tag_pair[0] for sent in self.data[self.tagging_scheme.value] for word_tag_pair in sent]
         self.tags = set([word_tag_pair[1] for sent in sentences for word_tag_pair in sent])  # get the unique tags
