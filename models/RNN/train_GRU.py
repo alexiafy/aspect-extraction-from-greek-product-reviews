@@ -21,13 +21,8 @@ def run_single_experiment():
     os.makedirs(RESULTS_FOLDER_PATH, exist_ok=True)  # succeeds even if directory exists.
 
 
-
-    # Define, train and evaluate model
-    # --------------------------------------------
-
     FOLDERNAME = "../../data/datasets/aspect_extraction_datasets/parts_1_2_3/"
     FILENAME = 'ae_parts_1_2_3_usrnames_replaced'
-
 
 
     # Run experiment
