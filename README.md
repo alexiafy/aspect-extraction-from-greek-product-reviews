@@ -3,12 +3,12 @@
 This is the github repository of the "Aspect Extraction from Greek Product Reviews" thesis, submitted for the partial fullfilment of the M.Sc. Data & Web Science.
 
 ----------------------------------------------------
-**Abstract**:
+**Abstract**
 
 Aspect-based Sentiment Analysis is a research field of Opinion Mining that focuses on the detection of the sentiment expressed towards specific aspects of a document. In a sentence, different sentiment might be expressed for different aspects, therefore, the extraction of those aspects and the detection of their sentiment is a significant task. A large number of studies have investigated this research field, however most of those studies have focused on the English language. This thesis focuses on aspect extraction from Greek product reviews, a task that has not been previously explored. Explicitly mentioned, single and multi-word aspects are detected on this purpose. Moreover, the task of aspect-based sentiment analysis is also explored, providing an end to end solution. A novel dataset that consists of product reviews in Greek language was leveraged. Different preprocessing steps were employed and their contribution in the evaluated performance is reported. Two baseline approaches, namely a feature engineering model and embedding-based neural network architectures, are firstly introduced. As an attempt to improve the performance, Bidirectional Encoder Representations from Transformers (BERT) model was also employed. The pre-trained BERT model was fine tuned and the contribution of different layers on top was investigated. The Conditional Random Field (CRF) layer was also utilized as an attempt to explore the advantage provided by applying constraint rules in the predicted labels. The BERT model contributed to a great performance gain compared to the baseline approaches, with which, the highest F1-Score for the aspect extraction task was 84.22\%.
 
 ----------------------------------------------------
-Data
+**Data**
 
 | First Header                          | Precision     | Recall        | F1-Score      |
 | ------------------------------------- | ------------- | ------------- | ------------- |
@@ -16,7 +16,7 @@ Data
 
 
 ----------------------------------------------------
-Model
+**Model**
 
 ![BERT CRF](https://user-images.githubusercontent.com/33041542/165788823-c5cdc1bb-cf8f-438e-9566-731ce1352e96.jpg)
 
@@ -25,10 +25,10 @@ The model summary:
 
 
 ----------------------------------------------------
-Run
+**Run**
 
 ----------------------------------------------------
-Results
+**Results**
 
 | First Header                          | Precision     | Recall        | F1-Score      |
 | ------------------------------------- | ------------- | ------------- | ------------- |
@@ -45,9 +45,9 @@ Results
 
 
 ----------------------------------------------------
-Requirements
+**Requirements**
 
-The requirements can be installed as follows:
+The dependencies are listed in the requirements.txt file, and can be installed with the following command:
 ```
 pip install -r requirements.txt
 ```
