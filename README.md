@@ -47,7 +47,7 @@ The model summary:
 ----------------------------------------------------
 **Requirements**
 
-The dependencies are listed in the requirements.txt file, and can be installed with the following command:
+The dependencies are listed in the requirements.txt file and can be installed with the following command:
 ```
 pip install -r requirements.txt
 ```
