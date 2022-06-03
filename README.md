@@ -47,7 +47,8 @@ Results
 ----------------------------------------------------
 Requirements
 
-The requirements are listed in the file:
-
-
+The requirements can be installed as follows:
+```
+pip install -r requirements.txt
+```
 ----------------------------------------------------
