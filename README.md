@@ -21,11 +21,38 @@ Aspect-based Sentiment Analysis is a research field of Opinion Mining that focus
 ![BERT CRF](https://user-images.githubusercontent.com/33041542/165788823-c5cdc1bb-cf8f-438e-9566-731ce1352e96.jpg)
 
 
-The model summary:
-
-
-----------------------------------------------------
-**Run**
+The summary of the model with which the highest performance was achieved is the following:
+```
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_ids (InputLayer)         [(None, 70)]         0           []                               
+                                                                                                  
+ input_mask (InputLayer)        [(None, 70)]         0           []                               
+                                                                                                  
+ segment_ids (InputLayer)       [(None, 70)]         0           []                               
+                                                                                                  
+ tf_bert_model_1 (TFBertModel)  TFBaseModelOutputWi  112921344   ['input_ids[0][0]',              
+                                thPoolingAndCrossAt               'input_mask[0][0]',             
+                                tentions(last_hidde               'segment_ids[0][0]']            
+                                n_state=(None, 70,                                                
+                                768),                                                             
+                                 pooler_output=(Non                                               
+                                e, 768),                                                          
+                                 past_key_values=No                                               
+                                ne, hidden_states=N                                               
+                                one, attentions=Non                                               
+                                e, cross_attentions                                               
+                                =None)                                                            
+                                                                                                  
+ dense_2 (Dense)                (None, 70, 256)      196864      ['tf_bert_model_1[0][0]']        
+                                                                                                  
+ dense_3 (Dense)                (None, 70, 4)        1028        ['dense_2[0][0]']                
+                                                                                                  
+==================================================================================================
+Total params: 113,119,236
+Trainable params: 113,119,236
+Non-trainable params: 0
+```
 
 ----------------------------------------------------
 **Results**
